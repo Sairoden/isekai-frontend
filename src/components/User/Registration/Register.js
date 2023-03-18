@@ -16,8 +16,6 @@ import { UserContext } from "../../Context/UserContext";
 const Register = () => {
   const { setUser, setFirstName, setLastName } = useContext(UserContext);
 
-  const API_URL = "https://isekai-backend.onrender.com/api/register";
-
   // forms
   const formik = useFormik({
     initialValues: {
@@ -30,7 +28,7 @@ const Register = () => {
 
     onSubmit: data => {
       axios
-        .post(API_URL || "http://localhost:8000/api/register", {
+        .post("https://isekai-backend.onrender.com/api/register", {
           firstName: data.firstname,
           lastName: data.lastname,
           email: data.email,

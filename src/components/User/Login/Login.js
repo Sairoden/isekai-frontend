@@ -17,8 +17,6 @@ import { UserContext } from "../../Context/UserContext";
 const Login = () => {
   const { setUser, setFirstName, setLastName } = useContext(UserContext);
 
-  const API_URL = "https://isekai-backend.onrender.com/api/register";
-
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -27,7 +25,7 @@ const Login = () => {
     validationSchema: LoginSchema,
     onSubmit: data => {
       axios
-        .post(API_URL || "http://localhost:8000/api/login", {
+        .post("https://isekai-backend.onrender.com/api/login", {
           email: data.email,
           password: data.password,
         })
