@@ -16,18 +16,7 @@ import { UserContext } from "../../Context/UserContext";
 const Register = () => {
   const { setUser, setFirstName, setLastName } = useContext(UserContext);
 
-  // const register = () => {
-  //   axios
-  //     .post("http://localhost:3001/register", {
-  //       first_name: firstNameReg,
-  //       last_name: lastNameReg,
-  //       email: emailReg,
-  //       password: passwordReg,
-  //     })
-  //     .then(response => {
-  //       console.log(response);
-  //     });
-  // };
+  const API_URL = "https://isekai-backend.onrender.com/api/register";
 
   // forms
   const formik = useFormik({
@@ -41,7 +30,7 @@ const Register = () => {
 
     onSubmit: data => {
       axios
-        .post("http://localhost:8000/api/register", {
+        .post(API_URL || "http://localhost:8000/api/register", {
           firstName: data.firstname,
           lastName: data.lastname,
           email: data.email,
