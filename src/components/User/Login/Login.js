@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import { LoginSchema } from "../../schemas";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 import Nuki from "../../../assets/Extra/nuki.webp";
 
@@ -33,8 +34,7 @@ const Login = () => {
           setFirstName(response.data.firstName);
           setLastName(response.data.lastName);
           setUser(true);
-
-          alert("Login Successful!");
+          toast("Login sucessfully!");
         })
         .catch(error => {
           console.log(error);

@@ -9,6 +9,7 @@ import {
   EyeInvisibleOutlined,
   EyeOutlined,
 } from "@ant-design/icons";
+import { toast } from "react-toastify";
 
 import Footer from "../../Footer/Footer";
 import { UserContext } from "../../Context/UserContext";
@@ -39,7 +40,7 @@ const Register = () => {
           setFirstName(data.firstname);
           setLastName(data.lastname);
           setUser(true);
-          alert("Register Successful!");
+          toast("Registration sucessfully!");
         })
         .catch(error => {
           console.log(error);
