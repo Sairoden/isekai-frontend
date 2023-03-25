@@ -34,7 +34,7 @@ const Login = () => {
           setFirstName(response.data.firstName);
           setLastName(response.data.lastName);
           setUser(true);
-          toast("Login sucessfully!");
+          toast.success("Login sucessfully!");
         })
         .catch(error => {
           console.log(error);

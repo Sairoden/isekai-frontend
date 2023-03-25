@@ -40,7 +40,7 @@ const Register = () => {
           setFirstName(data.firstname);
           setLastName(data.lastname);
           setUser(true);
-          toast("Registration sucessfully!");
+          toast.success("Registration sucessfully!");
         })
         .catch(error => {
           console.log(error);
