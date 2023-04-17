@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { RegisterSchema } from "../../schemas";
+import "./loading.css";
+
 import axios from "axios";
 // icon
 import {
@@ -16,6 +18,7 @@ import { UserContext } from "../../Context/UserContext";
 
 const Register = () => {
   const { setUser, setFirstName, setLastName } = useContext(UserContext);
+  const [loading, setLoading] = useState(false);
 
   // forms
   const formik = useFormik({
@@ -28,6 +31,8 @@ const Register = () => {
     validationSchema: RegisterSchema,
 
     onSubmit: data => {
+      setLoading(true);
+
       axios
         .post("https://isekai-backend.onrender.com/api/register", {
           firstName: data.firstname,
@@ -41,10 +46,12 @@ const Register = () => {
           setLastName(data.lastname);
           setUser(true);
           toast.success("Registration sucessfully!");
+          setLoading(false);
         })
         .catch(error => {
           console.log(error);
           setWarningSign(true);
+          setLoading(false);
         });
     },
   });
@@ -195,13 +202,21 @@ const Register = () => {
               )}
             </div>
           </div>
-          <button
-            disabled={formik.isSubmitting}
-            type="submit"
-            className="submit-btn"
-          >
-            REGISTER
-          </button>
+          {loading ? (
+            <>
+              <h1 class="title">Loading</h1>
+              <div class="rainbow-marker-loader"></div>
+            </>
+          ) : (
+            <button
+              disabled={formik.isSubmitting}
+              type="submit"
+              className="submit-btn"
+              style={{ cursor: "pointer" }}
+            >
+              REGISTER
+            </button>
+          )}
         </form>
         <div>
           <p>

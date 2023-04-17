@@ -9,6 +9,7 @@ import {
 import { LoginSchema } from "../../schemas";
 import axios from "axios";
 import { toast } from "react-toastify";
+import "./loading.css";
 
 import Nuki from "../../../assets/Extra/nuki.webp";
 
@@ -17,6 +18,7 @@ import { UserContext } from "../../Context/UserContext";
 
 const Login = () => {
   const { setUser, setFirstName, setLastName } = useContext(UserContext);
+  const [loading, setLoading] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -25,6 +27,8 @@ const Login = () => {
     },
     validationSchema: LoginSchema,
     onSubmit: data => {
+      setLoading(true);
+
       axios
         .post("https://isekai-backend.onrender.com/api/login", {
           email: data.email,
@@ -35,9 +39,11 @@ const Login = () => {
           setLastName(response.data.lastName);
           setUser(true);
           toast.success("Login sucessfully!");
+          setLoading(false);
         })
         .catch(error => {
           console.log(error);
+          setLoading(false);
           setWarningSign(true);
         });
     },
@@ -148,13 +154,21 @@ const Login = () => {
               </button>
             </div>
           </div>
-          <button
-            // disabled={formik.isSubmitting}
-            type="submit"
-            className="submit-btn"
-          >
-            LOGIN
-          </button>
+          {loading ? (
+            <>
+              <h1 class="title">Loading</h1>
+              <div class="rainbow-marker-loader"></div>
+            </>
+          ) : (
+            <button
+              disabled={formik.isSubmitting}
+              type="submit"
+              className="submit-btn"
+              style={{ cursor: "pointer" }}
+            >
+              LOGIN
+            </button>
+          )}
         </form>
         <div>
           <p>
