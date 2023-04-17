@@ -1,4 +1,6 @@
 import React from "react";
+import AboutUsCover from "../../assets/Extra/AboutUs.svg";
+import "./AboutUs.css";
 
 import Footer from "../Footer/Footer";
 
@@ -6,16 +8,17 @@ const AboutUs = () => {
   return (
     <>
       <div className="about flex-c justify-content-center">
-        <div className="heading">About Us</div>
+        <h1 className="about-us-heading">UNITING THROUGH ANIME</h1>
+        <img src={AboutUsCover} alt="Cashier cover" className="cover" />
         <div className="sub-heading text-center">
-          <h2>
+          <h2 className="about-us-sub-heading">
             Isekai is a retail experience created for fans of all things
             Japanese lifestyle and culture. We carry exclusive officially
             licensed apparel, accessories, and more.
           </h2>
         </div>
         <div className="body">
-          <h3>
+          <h3 className="about-us-paragraph">
             Isekai is a lifestyle brand inspired by Japanese streetwear and
             anime culture. We began to make t-shirts for ourselves. After
             discovering that our friends liked the designs, it was decided to
@@ -35,6 +38,9 @@ const AboutUs = () => {
             brand and community.
           </h3>
         </div>
+        <br />
+        <br />
+        <br />
       </div>
       <Footer />
     </>
