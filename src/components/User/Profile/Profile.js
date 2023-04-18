@@ -9,8 +9,6 @@ const Profile = () => {
   const { setUser, firstName, lastName } = useContext(UserContext);
   const { cartItems } = useContext(CartContext);
 
-  console.log(cartItems);
-
   return (
     <>
       <div className="profile">

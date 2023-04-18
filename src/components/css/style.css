@@ -292,7 +292,8 @@
   display: flex;
   flex-direction: row;
   position: relative;
-  animation: 10s slidy infinite;
+  animation: 15s slidy infinite;
+  animation-direction: alternate;
 }
 .slide-show img {
   width: 100%;

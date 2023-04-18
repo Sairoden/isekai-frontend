@@ -63,7 +63,6 @@ const productUrl = item => {
 
 const Favorite = () => {
   const { wishListItems } = useContext(WishListContext);
-  console.log(wishListItems);
 
   return (
     <>
