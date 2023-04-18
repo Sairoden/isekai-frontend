@@ -170,11 +170,6 @@ quadpay-widget {
   letter-spacing: 1px;
 }
 
-.product_container .cart_container .cart_button:hover {
-  background-color: transparent;
-  color: #000;
-}
-
 .product_container .cart_container .heart_button {
   background-color: #fff;
   margin-left: 2rem;

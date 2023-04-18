@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { RegisterSchema } from "../../schemas";
-import "./loading.css";
+import Loading from "../Loading";
 
 import axios from "axios";
 // icon
@@ -203,10 +203,7 @@ const Register = () => {
             </div>
           </div>
           {loading ? (
-            <>
-              <h1 class="title">Loading</h1>
-              <div class="rainbow-marker-loader"></div>
-            </>
+            <Loading />
           ) : (
             <button
               disabled={formik.isSubmitting}

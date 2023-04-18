@@ -9,7 +9,7 @@ import {
 import { LoginSchema } from "../../schemas";
 import axios from "axios";
 import { toast } from "react-toastify";
-import "./loading.css";
+import Loading from "../Loading";
 
 import Nuki from "../../../assets/Extra/nuki.webp";
 
@@ -155,10 +155,7 @@ const Login = () => {
             </div>
           </div>
           {loading ? (
-            <>
-              <h1 class="title">Loading</h1>
-              <div class="rainbow-marker-loader"></div>
-            </>
+            <Loading />
           ) : (
             <button
               disabled={formik.isSubmitting}
