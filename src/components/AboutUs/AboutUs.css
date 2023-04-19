@@ -47,6 +47,7 @@
 .about-us-paragraph {
   margin: 0;
   font-size: 1.2rem;
+  text-align: justify;
 }
 
 @media (min-width: 50em) {
