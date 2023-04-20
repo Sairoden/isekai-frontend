@@ -42,9 +42,8 @@ const Register = () => {
           password: data.password,
         })
         .then(response => {
-          console.log(response);
-          setFirstName(data.firstname);
-          setLastName(data.lastname);
+          setFirstName(response.data.firstname);
+          setLastName(response.data.lastname);
           setUser(true);
           navigate("/");
           toast.success("Registration sucessfully!");
