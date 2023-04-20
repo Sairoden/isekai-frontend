@@ -19,6 +19,7 @@ import { UserContext } from "../../Context/UserContext";
 const Register = () => {
   const { setUser, setFirstName, setLastName } = useContext(UserContext);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   // forms
   const formik = useFormik({
@@ -45,6 +46,7 @@ const Register = () => {
           setFirstName(data.firstname);
           setLastName(data.lastname);
           setUser(true);
+          navigate("/");
           toast.success("Registration sucessfully!");
           setLoading(false);
         })

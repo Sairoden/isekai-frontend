@@ -19,6 +19,7 @@ import { UserContext } from "../../Context/UserContext";
 const Login = () => {
   const { setUser, setFirstName, setLastName } = useContext(UserContext);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: {
@@ -38,6 +39,7 @@ const Login = () => {
           setFirstName(response.data.firstName);
           setLastName(response.data.lastName);
           setUser(true);
+          navigate("/");
           toast.success("Login sucessfully!");
           setLoading(false);
         })

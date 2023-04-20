@@ -16,7 +16,6 @@ export const UserProvider = ({ children }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/");
     if (firstName && lastName && user) {
       const items = {
         firstName,
