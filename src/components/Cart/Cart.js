@@ -1,4 +1,4 @@
-import React, { useRef, useContext, useState } from "react";
+import React, { useRef, useContext } from "react";
 import { CloseCircleOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
@@ -24,9 +24,6 @@ const Cart = ({ isCartToggle, setCartToggle }) => {
       <div className="cart-icon" onClick={() => setCartToggle(true)}>
         <div className="wrapper">
           <ShoppingCartOutlined />
-          {/* {cartItems.length > 0 && (
-      <div className="counter">{cartItems.length}</div>
-    )} */}
         </div>
       </div>
       <div className="cart">

@@ -1,6 +1,5 @@
-import React, { useRef, useContext, useState } from "react";
+import React, {  useContext,} from "react";
 import Footer from "../Footer/Footer";
-import CartItem from "../Cart/CartItem/CartItem";
 import { CartContext } from "../Context/CartContext";
 import "./../css/CartStyle.css";
 import "../css/style.css";
