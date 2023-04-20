@@ -1,6 +1,8 @@
 import { Menu } from "antd";
 import { Link } from "react-router-dom";
 export const apparelNav = (
+
+  
   <Menu>
     <Menu.Item key="1">
       <Link to="/collections/anime-clothing-apparel">All Apparel</Link>
