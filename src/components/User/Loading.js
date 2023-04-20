@@ -2,13 +2,13 @@ import "./loading.css";
 
 const Loading = () => {
   return (
-    <div class="loading-wrapper">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="shadow"></div>
-      <div class="shadow"></div>
-      <div class="shadow"></div>
+    <div className="loading-wrapper">
+      <div className="circle"></div>
+      <div className="circle"></div>
+      <div className="circle"></div>
+      <div className="shadow"></div>
+      <div className="shadow"></div>
+      <div className="shadow"></div>
       <span>Loading</span>
     </div>
   );

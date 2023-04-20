@@ -73,7 +73,9 @@ const ContactUs = () => {
             <textarea id="message" className="txt input"></textarea>
           </div>
           <div className="col">
-            <input type="submit" value="Submit" className="submit-btn" />
+            <button type="submit" className="submit-btn">
+              Submit
+            </button>
           </div>
         </form>
       </div>

@@ -12,26 +12,34 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (firstName && lastName && user) {
-      const items = {
-        firstName,
-        lastName,
-        user,
-      };
-      localStorage.setItem("items", JSON.stringify(items));
-    } else {
-      const items = JSON.parse(localStorage.getItem("items"));
+  const logout = () => {
+    setUser(false);
+    setFirstName("");
+    setLastName("");
+    localStorage.setItem("items", JSON.stringify(null));
+    navigate("/");
+  };
 
-      if (items) {
-        setFirstName(items.firstName);
-        setLastName(items.lastName);
-        setUser(items.user);
-      }
+  if (firstName && lastName && user) {
+    const items = {
+      firstName,
+      lastName,
+      user,
+    };
+    localStorage.setItem("items", JSON.stringify(items));
+  }
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("items"));
+
+    if (items) {
+      setFirstName(items.firstName);
+      setLastName(items.lastName);
+      setUser(true);
     }
+    console.log(user);
   }, [user]);
 
   const value = {
@@ -41,6 +49,7 @@ export const UserProvider = ({ children }) => {
     lastName,
     setFirstName,
     setLastName,
+    logout,
   };
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };

@@ -7,7 +7,7 @@ import "./profile.css";
 import profileImage from "../../../assets/Extra/checkout.png";
 
 const Profile = () => {
-  const { setUser, firstName, lastName } = useContext(UserContext);
+  const { firstName, lastName, logout } = useContext(UserContext);
   const { cartItems } = useContext(CartContext);
 
   return (
@@ -47,7 +47,7 @@ const Profile = () => {
           </div>
         </div>
         <button
-          onClick={() => setUser(false)}
+          onClick={logout}
           className="submit-btn"
           style={{
             cursor: "pointer",
