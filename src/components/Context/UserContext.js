@@ -17,6 +17,22 @@ export const UserProvider = ({ children }) => {
 
   useEffect(() => {
     navigate("/");
+    if (firstName && lastName && user) {
+      const items = {
+        firstName,
+        lastName,
+        user,
+      };
+      localStorage.setItem("items", JSON.stringify(items));
+    } else {
+      const items = JSON.parse(localStorage.getItem("items"));
+
+      if (items) {
+        setFirstName(items.firstName);
+        setLastName(items.lastName);
+        setUser(items.user);
+      }
+    }
   }, [user]);
 
   const value = {

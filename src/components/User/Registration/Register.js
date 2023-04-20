@@ -206,7 +206,6 @@ const Register = () => {
             <Loading />
           ) : (
             <button
-              disabled={formik.isSubmitting}
               type="submit"
               className="submit-btn"
               style={{ cursor: "pointer" }}
