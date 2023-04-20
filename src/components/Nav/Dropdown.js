@@ -1,146 +1,105 @@
 import { Menu } from "antd";
 import { Link } from "react-router-dom";
-
-const apparelMenuItems = [
-  {
-    label: <Link to="/collections/anime-clothing-apparel">All Apparel</Link>,
-    key: "1",
-  },
-  {
-    label: <Link to="/collections/anime-tee-shirts">Tee Shirts</Link>,
-    key: "2",
-  },
-  {
-    label: <Link to="/collections/anime-hoodies-and-sweatshirts">Hoodies</Link>,
-    key: "3",
-  },
-  {
-    label: <Link to="/collections/anime-socks">Socks</Link>,
-    key: "4",
-  },
-  {
-    label: (
+export const apparelNav = (
+  <Menu>
+    <Menu.Item key="1">
+      <Link to="/collections/anime-clothing-apparel">All Apparel</Link>
+    </Menu.Item>
+    <Menu.Item key="2">
+      <Link to="/collections/anime-tee-shirts">Tee Shirts</Link>
+    </Menu.Item>
+    <Menu.Item key="3">
+      <Link to="/collections/anime-hoodies-and-sweatshirts">Hoodies</Link>
+    </Menu.Item>
+    <Menu.Item key="4">
+      <Link to="/collections/anime-socks">Socks</Link>
+    </Menu.Item>
+    <Menu.Item key="5">
       <Link to="/collections/anime-weeb-cosplay-accessories">Cosplay</Link>
-    ),
-    key: "5",
-  },
-];
+    </Menu.Item>
+  </Menu>
+);
 
-const homegoodsMenuItems = [
-  {
-    label: <Link to="/collections/anime-homegoods">All Homegoods</Link>,
-    key: "6",
-  },
-  {
-    label: (
+export const homegoodsNav = (
+  <Menu>
+    <Menu.Item key="6">
+      <Link to="/collections/anime-homegoods">All Homegoods</Link>
+    </Menu.Item>
+    <Menu.Item key="7">
       <Link to="/collections/3d-led-anime-bedroom-lights-lamps">
         3D LED Lights
       </Link>
-    ),
-    key: "7",
-  },
-  {
-    label: (
+    </Menu.Item>
+    <Menu.Item key="8">
       <Link to="/collections/anime-kawaii-cartoon-bedroom-pillows">
         Pillows
       </Link>
-    ),
-    key: "8",
-  },
-];
-
-const lifestyleMenuItems = [
-  {
-    label: <Link to="/collections/sad-aesthetic">Sad Aesthetic</Link>,
-    key: "9",
-  },
-  {
-    label: (
+    </Menu.Item>
+  </Menu>
+);
+export const lifestyleNav = (
+  <Menu>
+    <Menu.Item key="9">
+      <Link to="/collections/sad-aesthetic">Sad Aesthetic</Link>
+    </Menu.Item>
+    <Menu.Item key="10">
       <Link to="/collections/vaporwave-aesthetic-clothing-tees-hoodies-merch">
         Vaporwave
       </Link>
-    ),
-    key: "10",
-  },
-  {
-    label: <Link to="/collections/kawaii-livestyle-accessories">Kawaii</Link>,
-    key: "11",
-  },
-  {
-    label: (
+    </Menu.Item>
+    <Menu.Item key="11">
+      <Link to="/collections/kawaii-livestyle-accessories">Kawaii</Link>
+    </Menu.Item>
+    <Menu.Item key="12">
       <Link to="/collections/japanese-senpai-shirts-and-hoodies">Senpai</Link>
-    ),
-    key: "12",
-  },
-  {
-    label: (
+    </Menu.Item>
+    <Menu.Item key="13">
       <Link to="/collections/japanese-waifu-shirts-and-hoodies">Waifu</Link>
-    ),
-    key: "13",
-  },
-];
+    </Menu.Item>
+  </Menu>
+);
 
-const techAccessoriesMenuItems = [
-  {
-    label: <Link to="/collections/anime-phone-cases">Phone Cases</Link>,
-    key: "14",
-  },
-  {
-    label: (
+export const techAccessoriesNav = (
+  <Menu>
+    <Menu.Item key="14">
+      <Link to="/collections/anime-phone-cases">Phone Cases</Link>
+    </Menu.Item>
+    <Menu.Item key="15">
       <Link to="/collections/anime-airpod-1-2-pro-cases">AirPod Cases</Link>
-    ),
-    key: "15",
-  },
-];
+    </Menu.Item>
+  </Menu>
+);
 
-const AboutUsMenuItems = [
-  {
-    label: <Link to="/help/about-us">About Us</Link>,
-    key: "16",
-  },
-  {
-    label: <Link to="/help/contact-us">Contact Us</Link>,
-    key: "17",
-  },
-  {
-    label: <Link to="/instruction">Wash & Care Instructions</Link>,
-    key: "18",
-  },
-];
+export const AboutUsNav = (
+  <Menu>
+    <Menu.Item key="16">
+      <Link to="/help/about-us">About Us</Link>
+    </Menu.Item>
+    <Menu.Item key="17">
+      <Link to="/help/contact-us">Contact Us</Link>
+    </Menu.Item>
+    <Menu.Item key="18">
+      <Link to="/instruction">Wash & Care Instructions</Link>
+    </Menu.Item>
+  </Menu>
+);
 
-const byAnimeItems = [
-  {
-    label: <Link to="/collections/all-anime-merch">All Anime Merch</Link>,
-    key: "19",
-  },
-  {
-    label: <Link to="/collections/demon-slayer-anime-merch">Demon Slayer</Link>,
-    key: "20",
-  },
-  {
-    label: (
+export const byAnimeNav = (
+  <Menu>
+    <Menu.Item key="19">
+      <Link to="/collections/all-anime-merch">All Anime Merch</Link>
+    </Menu.Item>
+    <Menu.Item key="20">
+      <Link to="/collections/demon-slayer-anime-merch">Demon Slayer</Link>
+    </Menu.Item>
+    <Menu.Item key="21">
       <Link to="/collections/dragon-ball-z-anime-merch">Dragon Ball Z</Link>
-    ),
-    key: "21",
-  },
-  {
-    label: <Link to="/collections/naruto-anime-merch">Naruto</Link>,
-    key: "22",
-  },
-  {
-    label: <Link to="/collections/one-piece-anime-merch">One Piece</Link>,
-    key: "23",
-  },
-];
-
-export const apparelNav = <Menu items={apparelMenuItems} />;
-
-export const homegoodsNav = <Menu items={homegoodsMenuItems} />;
-
-export const lifestyleNav = <Menu items={lifestyleMenuItems} />;
-
-export const techAccessoriesNav = <Menu items={techAccessoriesMenuItems} />;
-
-export const AboutUsNav = <Menu items={AboutUsMenuItems} />;
-
-export const byAnimeNav = <Menu items={byAnimeItems}></Menu>;
+    </Menu.Item>
+    <Menu.Item key="22">
+      <Link to="/collections/naruto-anime-merch">Naruto</Link>
+    </Menu.Item>
+    <Menu.Item key="23">
+      <Link to="/collections/one-piece-anime-merch">One Piece</Link>
+    </Menu.Item>
+  </Menu>
+);
