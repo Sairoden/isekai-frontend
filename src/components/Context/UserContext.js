@@ -39,7 +39,6 @@ export const UserProvider = ({ children }) => {
       setLastName(items.lastName);
       setUser(true);
     }
-    console.log(user);
   }, [user]);
 
   const value = {
