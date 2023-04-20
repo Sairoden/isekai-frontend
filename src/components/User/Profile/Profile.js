@@ -4,6 +4,7 @@ import Footer from "../../Footer/Footer";
 import { UserContext } from "../../Context/UserContext";
 import { CartContext } from "../../Context/CartContext";
 import "./profile.css";
+import profileImage from "../../../assets/Extra/checkout.png";
 
 const Profile = () => {
   const { setUser, firstName, lastName } = useContext(UserContext);
@@ -13,9 +14,10 @@ const Profile = () => {
     <>
       <div className="profile">
         <div className="heading">My Account</div>
-        <div className="sub-heading text-center">
+        <div className="sub-heading text-center profile-paragraph">
           Welcome back
           <span>{" " + firstName + " " + lastName}</span>
+          <img src={profileImage} alt="" className="profile-image" />
         </div>
         <div className="body">
           <div className="row ">

@@ -10,3 +10,23 @@
   height: 100%;
   width: 15rem;
 }
+
+.profile-image {
+  height: 20rem !important;
+  background-color: #fff;
+  background-position: center;
+  position: absolute;
+  z-index: -99;
+  margin-bottom: 5rem;
+  top: 15%;
+  left: 63%;
+}
+
+.profile {
+  margin-top: 5rem;
+}
+
+.profile-paragraph {
+  z-index: 5;
+  margin-bottom: 5rem;
+}
