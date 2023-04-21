@@ -119,7 +119,7 @@ const Cosplay = () => {
                 className="link overlay"
                 key={item.id}
               >
-                <Card className="product_card" item={item} key={item.id} />
+                <Card className="product_card " item={item} key={item.id} />
               </Link>
             ))}
         </div>

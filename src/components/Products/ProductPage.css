@@ -6,9 +6,7 @@
 }
 
 .product_container .product_image {
-  height: 35%;
   width: 35%;
-  border-radius: 1rem;
 }
 .product_container .right {
   margin: 1%;
@@ -124,15 +122,11 @@ quadpay-widget {
   border-color: #ffffff !important;
 }
 .product_container
-  .ant-radio-button-wrapper-checked:not(
-    .ant-radio-button-wrapper-disabled
-  ):hover::before {
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover::before {
   background: none;
 }
 .product_container
-  .ant-radio-button-wrapper-checked:not(
-    .ant-radio-button-wrapper-disabled
-  )::before {
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
   background: none;
 }
 
@@ -168,6 +162,11 @@ quadpay-widget {
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
   letter-spacing: 1px;
+}
+
+.product_container .cart_container .cart_button:hover {
+  background-color: transparent;
+  color: #000;
 }
 
 .product_container .cart_container .heart_button {
