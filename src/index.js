@@ -5,7 +5,7 @@ import "normalize.css";
 import "antd/dist/antd.min.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { CartProvider } from "./components/Context/CartContext";
 import { WishListProvider } from "./components/Context/WishListContext";
 import { UserProvider } from "./components/Context/UserContext";
@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <UserProvider>
         <CartProvider>
           <WishListProvider>
@@ -24,7 +24,7 @@ root.render(
           </WishListProvider>
         </CartProvider>
       </UserProvider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 

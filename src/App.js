@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
@@ -80,7 +80,7 @@ import Instruction from "./components/Products/Instruction/Instruction";
 function App() {
   return (
     <>
-      <Routes history={BrowserRouter}>
+      <Routes>
         <Route path="/" element={<Nav />}>
           <Route index element={<Home />} />
 
