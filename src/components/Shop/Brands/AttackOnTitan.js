@@ -28,7 +28,7 @@ const AttackOnTitan = () => {
   const [data, setData] = useState(initialState);
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(numOnEachPage);
-  console.log(combineProduct);
+
   useEffect(() => {});
   const filterOnChange = value => {
     if (value === "All") {
