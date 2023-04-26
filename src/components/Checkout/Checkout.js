@@ -1,4 +1,4 @@
-import React, {  useContext,} from "react";
+import React, { useContext } from "react";
 import Footer from "../Footer/Footer";
 import { CartContext } from "../Context/CartContext";
 import "./../css/CartStyle.css";
@@ -9,7 +9,7 @@ const Checkout = item => {
   const { cartItems, cartTotal, removeItemFromCart } = useContext(CartContext);
 
   function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return x.toLocaleString("en-US") + ".00";
   }
 
   return (
@@ -48,7 +48,7 @@ const Checkout = item => {
                       </div>
                     </div>
                     {cartItems.map(item => (
-                      <div className="row">
+                      <div className="row" key={item.id}>
                         <div className="col-95">
                           <div className="row">
                             <div className="col-25 right">
@@ -56,7 +56,9 @@ const Checkout = item => {
                             </div>
                             <div className="col-25">{item.name}</div>
                             <div className="col-25">{item.quantity}</div>
-                            <div className="col-25 right">₱{item.price}</div>
+                            <div className="col-25 right">
+                              ₱{numberWithCommas(item.price)}
+                            </div>
                           </div>
                         </div>
                         <div className="col-5">
@@ -79,7 +81,7 @@ const Checkout = item => {
                   <div className="row">
                     <div className="col right">
                       <div>SubTotal: ₱ {numberWithCommas(cartTotal)}</div>
-                      <div>Shipping fee: ₱ 49</div>
+                      <div>Shipping fee: ₱ 49.00</div>
                     </div>
                     <div className="col-75 bold">
                       <b>
@@ -97,7 +99,7 @@ const Checkout = item => {
                     {cartItems.length ? (
                       <div>
                         <div className="col">
-                          <form className=" form ">
+                          <form className="form">
                             <div className="col">
                               <label>
                                 {" "}

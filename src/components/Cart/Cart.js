@@ -15,6 +15,10 @@ const Cart = ({ isCartToggle, setCartToggle }) => {
   const { cartItems, cartTotal } = useContext(CartContext);
   const { user } = useContext(UserContext);
 
+  function numberWithCommas(x) {
+    return x.toLocaleString("en-US") + ".00";
+  }
+
   // control for clicking outside the layer
   const $sideBarRef = useRef();
   OnClickOutside($sideBarRef, () => setCartToggle(false));
@@ -42,7 +46,9 @@ const Cart = ({ isCartToggle, setCartToggle }) => {
                 {cartItems.map(item => (
                   <CartItem key={item.id} cartItem={item} />
                 ))}
-                <div className="total-price">Total: ₱ {cartTotal}</div>
+                <div className="total-price">
+                  Total: ₱ {numberWithCommas(cartTotal)}
+                </div>
                 <div>
                   <Link
                     to={user ? "../Checkout" : "/login"}

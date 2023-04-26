@@ -62,7 +62,7 @@ const PillowProductPage = () => {
         <div className="right">
           <div className="top_right">
             <p>{filteredProduct.name}</p>
-            <p>₱{filteredProduct.price}</p>
+            <p>₱{filteredProduct.price}.00</p>
             <p className="fourPayments">
               <quadpay-widget className="quadpay" logoColor="#1d75ec" />
             </p>

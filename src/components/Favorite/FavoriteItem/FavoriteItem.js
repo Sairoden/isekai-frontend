@@ -4,7 +4,8 @@ const FavoriteItem = ({ wishListItem, miniTop, mini }) => {
   const { name, photo, price } = wishListItem;
 
   function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return x.toFixed(2);
   }
 
   return (
