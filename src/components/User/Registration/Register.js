@@ -77,7 +77,7 @@ const Register = () => {
     <>
       <div className="register">
         <h1 className="heading">Register</h1>
-        <p className="sub-heading">Please fill in the information below:</p>
+        <p className="sub-heading">Please fill in the information below</p>
         <form method="POST" onSubmit={formik.handleSubmit}>
           {/* error message */}
           {WarningSign ? (
