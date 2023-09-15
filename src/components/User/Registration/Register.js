@@ -96,7 +96,7 @@ const Register = () => {
             <div>
               {/* first name */}
               <label htmlFor="first-name">
-                <h3 className="label">First Name:</h3>
+                <h3 className="label">First Name</h3>
               </label>
             </div>
             <input
@@ -120,7 +120,7 @@ const Register = () => {
             <div>
               {/* last name */}
               <label htmlFor="last-name">
-                <h3 className="label">LastName:</h3>
+                <h3 className="label">Last Name</h3>
               </label>
             </div>
             <input
